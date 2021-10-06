@@ -209,15 +209,16 @@ Use the getAverageWordLength function below to do the following:
 */
 
 function getAverageWordLength(array){
-let sum = 0
+  let sum = 0
   //receive the array
-for(let i = 0; i < array.length; i++){
-sum = sum + array[i].split([' ']).length; //count how many words per item
-
-}
-
+  if(array.length === 0){
+    return 'Error'
+  }else{
+    for(let i = 0; i < array.length; i++){
+    sum = sum + array[i].split([' ']).length; //count how many words per item
+  }
 //return average number of words
-return sum / 31;
+  return sum / array.length;}
 }
 
 console.log(getAverageWordLength(originalFlavors));
@@ -236,7 +237,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 function getRandomFlavors(array1, array2, array3, array4){
-  /*code here*/
+  let randomFlavors = [];
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
